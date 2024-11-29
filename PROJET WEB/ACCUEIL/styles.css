@@ -1,0 +1,437 @@
+:root {
+    --primary-color: #FFB800;
+    --text-color: #000000fb;
+    --bg-light: #ffffff;
+    --bg-gray: #d9d9d9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Abhaya Libre ExtraBold;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-around; /* Espace entre le logo, le menu et le bouton */
+    align-items: center;
+    padding: 0 70px; 
+    background-color: #f5f5f5;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text img {
+    height: 50px;
+    margin-right: 10px; /* Espacement entre le logo et le texte */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 30px; /* Espacement entre les éléments du menu */
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn-login {
+    width: 110px;
+    height: 25px;
+    font-weight: 600;
+    background-color: orange;
+    color: black;
+    border: none;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 242px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/fb6564f2365159f3b6feee7e68157a78\ 1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+
+  /* Section welcome */
+  .entete {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
+  }
+  
+  .entete-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .entete-lead {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #000000;
+    text-align: justify;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  
+
+
+.description {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.description-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Réduction de l'écart entre les éléments */
+}
+
+.description-image {
+    flex: 1;
+    width: 286px;
+    height: 260px;
+    margin-left: 80px; /* Réduction de l'espacement à droite */
+}
+
+.description-image img {
+    max-width: 100%;
+}
+
+.description-text {
+    flex: 3; /* Augmentation de la largeur du texte */
+    margin-right: 70px;
+    display: flex; /* Active flexbox */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: space-between; /* Place le texte en haut et le bouton en bas */
+    text-align: justify; /* Justifie le texte principal */
+    height: 100%; /* S'assure que la hauteur est définie */
+    font-size: 1.1rem;
+
+}
+
+.decouvrir {
+    background-color: #FFA500;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.5rem 1.5rem; /* Espacement interne réduit pour un design plus compact */
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600; /* Texte en gras */
+    text-align: center; /* Centre le texte */
+    line-height: normal; /* Assure un alignement vertical correct */
+    display: block; /* Permet au bouton d'être un élément block */
+    margin-left: auto; /* Centre horizontalement */
+    margin-right: auto; /* Centre horizontalement */
+}
+
+
+.decouvrir:hover {
+    background-color: #ff9100;
+}
+
+
+/* Video section */
+.video-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+iframe {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-description {
+    max-width: 100%; /* Permet au texte de s'étendre sur toute la largeur disponible */
+    width: 1300px; /* Augmente la largeur spécifique du texte */
+    margin-left: auto; /* Centre le texte horizontalement */
+    margin-right: auto; /* Centre le texte horizontalement */
+    text-align: justify; /* Aligne le texte de manière justifiée */
+    line-height: 1.6; /* Ajoute de l'espacement entre les lignes pour améliorer la lisibilité */
+    font-size: 1.1rem;
+
+}
+
+/* General Styles */
+.carousel-container {
+    text-align: center;
+    background-color: #ffF7cb;
+    padding: 40px 20px;
+}
+
+.carousel-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Carousel Styles */
+.carousel {
+    display: flex;
+    overflow: hidden; /* Cache les parties non visibles des cartes */
+    position: relative;
+    width: 100%; /* S'étend sur toute la largeur de l'écran */
+    margin: 0; /* Supprime les marges externes */
+    padding: 0; /* Supprime les marges internes */
+    box-sizing: border-box; /* Assure un calcul correct des dimensions */
+}
+
+
+.carousel-item {
+    flex: 0 0 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffF7cb;
+    padding: 20px;
+    text-align: left;
+    width: 100%; /* Occupe 100% de la largeur du carrousel */
+    margin-left: 60px; /* Supprime les marges externes */
+    margin-right: 60px;
+    box-sizing: border-box; /* Assure un calcul correct des dimensions */
+    align-items: center;
+}
+
+
+.testimonial-avatar {
+    width: 184px;
+    height: 182px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.testimonial-text-container {
+    flex: 1;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #ffcc00;
+}
+
+
+
+/* Style du footer */
+.footer {
+    background-color: #f8f9fa;
+    width: 100%;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Section supérieure du footer */
+.footer-top {
+    max-width: 1200px;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* Style des icônes sociales */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+}
+
+.social-icons i {
+    font-size: 30px;
+}
+
+/* Style de la navigation */
+.footer-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+}
+
+.footer-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    margin-right: 100px;
+
+
+}
+
+.footer-nav a:hover {
+    color: #ffc107;
+}
+
+/* Section inférieure du footer */
+.footer-bottom {
+    max-width: 3000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4D4D4D;
+
+}
+
+.footer-left{
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-left: 120px;
+
+}
+.footer-right {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-right: 120px;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .hero-section{
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

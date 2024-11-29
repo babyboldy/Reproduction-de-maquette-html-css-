@@ -1,0 +1,503 @@
+:root {
+    --primary-color: #FFA500;
+    --text-color: #000000fb;
+    --bg-light: #ffffff;
+    --bg-gray: #d9d9d9;
+    --bg-color: #fff;
+    --sidebar-bg: #f5f5f5;
+    --header-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Abhaya Libre;
+
+}
+
+body {
+    font-family: Abhaya Libre;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-around; /* Espace entre le logo, le menu et le bouton */
+    align-items: center;
+    padding: 0 70px; 
+    background-color: #f5f5f5;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text img {
+    height: 50px;
+    margin-right: 10px; /* Espacement entre le logo et le texte */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 30px; /* Espacement entre les éléments du menu */
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+}
+
+.btn-container {
+    display: flex;
+}
+
+.btn-login {
+    width: 110px;
+    height: 25px;
+    font-weight: 600;
+    background-color: orange;
+    color: black;
+    border: none;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 300px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/fb6564f2365159f3b6feee7e68157a78\ 1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    gap: 40px;
+    padding-top: 40px;
+}
+
+/* Chapter Sidebar */
+.chapter {
+    width: 280px;
+    background:  #D9D9D9 ;
+    padding: 20px;
+    margin-left: 30px;
+    height: 1200px
+
+}
+
+
+.chapter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+}
+
+.road-map {
+    list-style: none;
+}
+
+.road-map > li {
+    margin-bottom: 15px;
+}
+
+.road-map p {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.road-map-li {
+    padding: 5px 0;
+    padding-left: 20px;
+    list-style: none;
+    position: relative;
+}
+
+.road-map-li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* Lesson Content */
+.lesson-content {
+    flex: 1;
+    padding: 0 70px;
+    max-width: calc(100% - 320px);
+    margin-left: 3%;
+    margin-right: 5%;
+
+}
+.lesson-content h2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.video-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.lesson-text {
+    margin-right: 5px;}
+
+.lesson-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.content-with-image {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+    text-align: justify;
+}
+
+.image-content {
+    flex: 0 0 400px;
+}
+
+.image-content img {
+    width: 80%;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var( --text-color);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.mark-complete-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mark-complete-checkbox {
+    appearance: none; /* Supprime le style par défaut de la checkbox */
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color); /* Couleur du cercle */
+    border-radius: 50%; /* Rend la checkbox circulaire */
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+}
+.mark-complete-checkbox:checked{
+    background-color: var(--primary-color); /* Couleur du cercle rempli */
+    border-color: var(--primary-color); /* Bordure prend la même couleur */
+
+}
+
+.mark-complete-container label {
+    font-size: 16px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+
+/* Forum section styles */
+.forum-section {
+    padding: 3rem 0; /* Supprime les marges latérales */
+    margin: 0; /* Supprime les marges */
+    width: 100%; /* Prend toute la largeur */
+    max-width: 100%; /* Supprime toute limitation de largeur */
+    background-color: #D9D9D9; /* Conserve le fond */
+}
+
+
+.forum-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.forum-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-left: 150px;
+}
+
+/* Form styles */
+.forum-form-container {
+    background: #D9D9D9;
+    padding: 2rem;
+    max-width: 500px;
+
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+    transition: all 0.2s;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f97316;
+}
+
+.submit-button {
+    width: 110px;
+    height: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+    background-color: #FFA500;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.5rem 1.5rem; /* Espacement interne réduit pour un design plus compact */
+    margin-top: 2rem;
+    line-height: normal; /* Assure un alignement vertical correct */
+    display: block; /* Permet au bouton d'être un élément block */
+    margin-left: auto; /* Centre horizontalement */
+    margin-right: auto; /* Centre horizontalement */
+}
+
+.submit-button:hover {
+    background-color: #ea580c;
+}
+
+/* Messages styles */
+.forum-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-right: 150px;
+    max-width: 4500px;
+}
+
+.message {
+    background: #D9D9D9;
+    padding: 1.5rem;
+}
+
+.message h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.message p {
+    color: #000000;
+    text-align: justify;
+}
+
+
+
+
+
+
+/* Style du footer */
+.footer {
+    background-color: #f8f9fa;
+    width: 100%;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Section supérieure du footer */
+.footer-top {
+    max-width: 1200px;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* Style des icônes sociales */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+}
+
+.social-icons i {
+    font-size: 30px;
+}
+
+/* Style de la navigation */
+.footer-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+}
+
+.footer-nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    margin-right: 100px;
+
+
+}
+
+.footer-nav a:hover {
+    color: #ffc107;
+}
+
+/* Section inférieure du footer */
+.footer-bottom {
+    max-width: 3000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4D4D4D;
+
+}
+
+.footer-left{
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-left: 120px;
+
+}
+.footer-right {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-right: 120px;
+}
+
+.footer-logo {
+    height: 40px;
+    width: auto;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+
+
+    }
+}
